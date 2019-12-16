@@ -67,4 +67,11 @@ public class CustomerController extends BaseController {
     }
 
 
+    @RequestMapping("countCustomerLevelGroupByLevel")
+    @ResponseBody
+    public Map<String, Object> countCustomerLevelGroupByLevel() {
+        return customerService.countCustomerLevelGroupByLevel();
+    }
+
+
 }

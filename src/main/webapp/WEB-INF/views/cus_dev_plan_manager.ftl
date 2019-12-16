@@ -6,6 +6,7 @@
 </head>
 <body style="margin: 15px">
 <#--营销机会详情展示-->
+
 <div id="p" class="easyui-panel" title="销售机会信息" style="width: 700px;height: 350px;padding: 10px">
     <table cellspacing="8px">
         <input type="hidden" id="saleChanceId" name="saleChanceId" value="${saleChance.id}"/>

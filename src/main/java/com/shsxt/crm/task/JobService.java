@@ -15,7 +15,7 @@ public class JobService {
     private CustomerService customerService;
 
 
-    @Scheduled(cron = "0/5 * * * * ? ")
+    //@Scheduled(cron = "0/5 * * * * ? ")
     public  void job(){
         //System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"JobService-->job定时任务-->hello world");
         customerService.updateCustomerState();

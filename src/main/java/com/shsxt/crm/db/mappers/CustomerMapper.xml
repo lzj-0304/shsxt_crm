@@ -322,4 +322,20 @@
                       WHERE is_valid = 1 AND state = 1 AND DATE_ADD(order_date, INTERVAL 6 MONTH) &gt; NOW()
                     )
     </select>
+  <select id="queryCustomerByCusNo"  parameterType="string" resultType="com.shsxt.crm.vo.Customer">
+       select <include refid="Base_Column_List"/> from t_customer where is_valid=1 and khno=#{cusNo}
+  </select>
+    <select id="countCustomerLevelGroupByLevel" resultType="java.util.Map">
+        SELECT
+            level,
+            count(id) AS total
+        FROM
+            t_customer
+        WHERE
+            is_valid = 1
+        AND state = 0
+        GROUP BY
+            LEVEL
+        ORDER BY total desc
+    </select>
 </mapper>
